@@ -1,0 +1,92 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    padding-top: 200px; /* Mueve todo el contenido hacia abajo */
+    backdrop-filter: blur(5px);
+    overflow: hidden; /* Para que el contenido no se salga del contenedor */
+  
+  }
+  
+  
+  
+  .hero .content {
+    z-index: 2;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+    position: relative;
+    padding: 20px; /* Espacio para que el contenido no toque el marco */
+    background: rgba(255, 255, 255, 0.2); /* Ajustar opacidad */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 90%; /* Para que no se vea tan grande */
+  
+  }
+  
+  .hero .content h1 {
+    font-family: "Great Vibes", cursive;
+    font-size: 6rem;
+    color: #4a884f;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+  }
+  
+  .hero .content h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2.2rem, 6vw, 3rem); /* Tamaño más elegante */
+    color: #4a884f;
+    margin-bottom: 1rem;
+    
+  }
+  
+  .hero .content p {
+    font-family: "Verdana", cursive;
+    font-size: 1.2rem;
+    color: #4a884f;
+    margin-top: 1rem;
+    line-height: 1.6;
+    font-weight: lighter;
+    font-style: italic;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: 100px; /* Menos espacio en la parte superior para móviles */
+    }
+  
+    .hero .content h1 {
+      font-size: clamp(4rem, 8vw, 4rem); /* Tamaño de fuente más pequeño */
+      gap: 0.3rem; /* Menos espacio entre los nombres */
+    }
+  
+    .hero .content h2 {
+      font-size: clamp(2rem, 5vw, 2rem); /* Tamaño de fuente más pequeño */
+    }
+  
+    .hero .content p {
+      font-size: clamp(1.2rem, 3.5vw, 1.8rem); /* Tamaño de fuente más pequeño */
+    }
+  }
+  
+  .couple-photo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  .couple-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+  
